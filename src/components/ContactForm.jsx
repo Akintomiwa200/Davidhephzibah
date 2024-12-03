@@ -14,12 +14,12 @@ function ContactForm() {
                         <FaEnvelope className="text-xl" />
                         <span>Email</span>
                     </a>
-                    <a href="tel:+123456789" className="flex items-center space-x-2">
+                    <a href="tel:+2348133984181" className="flex items-center space-x-2">
                         <FaPhone className="text-xl" />
                         <span>Call</span>
                     </a>
                     <a
-                        href="https://wa.me/123456789"
+                        href="https://wa.me/+2348133984181"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center space-x-2"
