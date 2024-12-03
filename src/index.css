@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --card-bg: 0, 0, 0;
+  --samp-rgb: 0,0,0;
+  --nav-rgb:230, 230, 230;
+   --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --card-rgb: 0, 0, 0;
+  --nav-rgb:0,0,0;  
+  --samp-rgb: 254 215 170;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  height: 100vh;
+  /* border-bottom:(var(--border)); */
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.nav-bg{
+  background-color: rgb(var(--nav-rgb));
+  color: rgb(var(--foreground-rgb)) ;
+}
+
+.samp{
+  color: rgb(var(--samp-rgb));
+}
+.card-bg{
+    color: rgb(var(--card-rgb));
+}
+
+.border-bottom{
+border-bottom-width:  2px;
+border-bottom-color: rgb(var(--foreground-rgb));
+}
+
+.border-top{
+border-top-width:  2px;
+border-top-color: rgb(var(--foreground-rgb));
+}
+
+.border-left{
+border-left-width:  2px;
+border-left-color: rgb(var(--foreground-rgb));
+}
+
+.border-right{
+border-right-width:  2px;
+border-right-color: rgb(var(--foreground-rgb));
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
