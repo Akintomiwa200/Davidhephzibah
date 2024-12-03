@@ -19,7 +19,7 @@ function App() {
 
   return (
     <Router>
-      <div className="font-sans text-gray-800">
+      <div className="font-sans text-gray-800 w-[100vw] overflow-x-hidden">
               <Hero />
         <Services />
         <About />
