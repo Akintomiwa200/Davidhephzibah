@@ -26,6 +26,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   height: 100vh;
+  overflow-x: hidden;
   /* border-bottom:(var(--border)); */
   background: linear-gradient(to bottom,
       transparent,
