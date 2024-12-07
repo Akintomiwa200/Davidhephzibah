@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
@@ -20,7 +19,7 @@ function App() {
   return (
     <Router>
       <div className="font-sans text-gray-800">
-              <Hero />
+        <Hero />
         <Services />
         <About />
         <StockMarketMasterClass/>
