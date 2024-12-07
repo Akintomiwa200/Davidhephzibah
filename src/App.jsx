@@ -18,8 +18,8 @@ function App() {
 
   return (
     <Router>
-      <div className="font-sans text-gray-800">
-        <Hero />
+      <div className="font-sans min-height-[100vh] w-[100vh] overflow-x-hidden text-gray-800">
+              <Hero />
         <Services />
         <About />
         <StockMarketMasterClass/>
