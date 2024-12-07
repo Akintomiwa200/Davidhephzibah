@@ -2,11 +2,12 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
 import WhatYouLearn from './components/WhatYouLearn';
-//import Testimonial from './components/Testmonial'; 
+import Testimonial from './components/Testmonial'; 
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import StockMarketMasterClass from './components/StockMarketMasterClass';
@@ -18,13 +19,13 @@ function App() {
 
   return (
     <Router>
-      <div className="font-sans text-gray-800 w-[100vw] flex flex-col justify-center items-center overflow-x-hidden">
+      <div className="font-sans text-gray-800">
               <Hero />
         <Services />
         <About />
         <StockMarketMasterClass/>
         <WhatYouLearn />
-      //<Testimonial />
+        <Testimonial />
         <ContactForm />
         <Footer />
       </div>
