@@ -17,7 +17,7 @@ function App() {
 
   return (
     <Router>
-      <div className="font-sans min-height-[100vh] w-[100vh] overflow-x-hidden text-gray-800">
+      <div className="font-sans min-height-[100vh] w-[100vw] overflow-x-hidden text-gray-800">
               <Hero />
         <Services />
         <About />
