@@ -24,7 +24,6 @@ function App() {
         <About />
         <StockMarketMasterClass/>
         <WhatYouLearn />
-      /*<Testimonial />*/
         <ContactForm />
         <Footer />
       </div>
