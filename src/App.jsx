@@ -6,7 +6,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
 import WhatYouLearn from './components/WhatYouLearn';
-import Testimonial from './components/Testmonial';
+// import Testimonial from './components/Testmonial';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import StockMarketMasterClass from './components/StockMarketMasterClass';
@@ -25,7 +25,7 @@ function App() {
         <StockMarketMasterClass/>
         <WhatYouLearn />
         <ContactForm />
-        <Testimonial/>
+{/*         <Testimonial/> */}
         <Footer />
       </div>
     </Router>
