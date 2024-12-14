@@ -70,6 +70,12 @@ function StockMarketMasterClass() {
                     payment for the{' '}
                     <span className="font-bold">Stock Market Master Class Course.</span>
                 </p>
+                 <div
+                    className="text-center text-xl font-bold text-green-600 mb-6"
+                    data-aos="fade-in"
+                >
+                    Course Fee: 20,000 Naira
+                </div>
                 <div className="flex justify-center" data-aos="zoom-in">
                     <a
                         href="https://paystack.com/pay/h4nss8kzr2"
