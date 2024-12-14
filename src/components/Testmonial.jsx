@@ -8,10 +8,11 @@ const TestimonialSlider = () => {
             image: "/images/testimonial1.jpg",
         },
         {
-            name: "John Smith",
-            text: "The investment strategies I learned here have given me a steady income. Highly recommended!",
-            image: "/images/testimonial2.jpg",
+            name: "Coach David Hephzibah",
+            text: "My own story go long oooo. Seriously, boss has been a great blessing to me, especially on this KDP journey. He has made me grow financially and also ensure I don't spend anyhow. He will tell me as the money dey drop remember to save and hide your head.",
+            image: "/images/testimonial6.jpg", // Replace with the correct path for the second image
         },
+
        {
             name: "Gabriel Onifade Aka Coach Gabriel",
             text: "Stock marketing Masterclass course by Coach David is the best financial Education class I have attended. I could remember how I have been struggling to manage my finances until I accessed the class on his status and the rest was history. Now I know how to manage my finances, how to diversify my income, know profitable stock with good returns, and increase my income through stock. If you are looking for how to manage your finances, financial discipline, and profitable stock you can invest in with good returns, I recommend this course anytime and anyday.",
