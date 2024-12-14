@@ -2,11 +2,12 @@ import { useState, useEffect, useRef } from "react";
 
 const TestimonialSlider = () => {
     const testimonials = [
-        {
-            name: "Jane Doe",
-            text: "This coaching has transformed my finances! I went from paycheck-to-paycheck to saving and investing confidently.",
-            image: "/images/testimonial1.jpg",
+       {
+            name: "Anonymous",
+            text: "It's been awesome and wholesome, you are a master in the game sir. So it's been helpful really. I will just try to put more money.",
+            image: "/images/testimonial7.jpg", // Replace with the correct path for the third image
         },
+
         {
             name: "Coach David Hephzibah",
             text: "My own story go long oooo. Seriously, boss has been a great blessing to me, especially on this KDP journey. He has made me grow financially and also ensure I don't spend anyhow. He will tell me as the money dey drop remember to save and hide your head.",
