@@ -63,7 +63,7 @@ const TestimonialSlider = () => {
       <div className="container px-5 mx-auto text-center">
         <FaUsers className="w-10 h-10 text-gray-200 inline-block mb-4" />
         <h1 className="sm:text-4xl text-3xl font-medium title-font text-white mb-12">
-          Client Testimonials
+       Testimonies from Our Previous Students
         </h1>
         {/* Slider Content */}
         <div className="relative overflow-hidden max-w-4xl mx-auto">
