@@ -52,83 +52,82 @@ const TestimonialSlider = () => {
         intervalRef.current = setInterval(nextSlide, 3000);
     };
 
-    return (
-        <div className="py-16 bg-gray-50">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
-                Testimonies from Our Previous Students
-            </h2>
-            <div className="relative w-full max-w-[900px] mx-auto h-80 bg-white rounded-lg shadow-lg overflow-hidden">
-                {/* Testimonial Content */}
-                <div
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={{
-                        transform: `translateX(-${currentIndex * 100}%)`,
-                        width: `${testimonials.length * 100}%`,
-                    }}
-                >
-                    {testimonials.map((testimonial, index) => (
-                        <div
-                            key={index}
-                            className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto flex-shrink-0 flex flex-col items-center text-center px-4 sm:px-6 py-6"
-                            style={{ width: "100%" }}
-                        >
-                            <img
-                                src={testimonial.image}
-                                alt={testimonial.name}
-                                className="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-full shadow-md mb-4"
-                            />
-                            <p className="text-gray-700 italic text-sm sm:text-base leading-relaxed">
-                                &quot;{testimonial.text}&quot;
-                            </p>
-                            <h4 className="text-lg font-semibold text-gray-900 mt-2">
-                                - {testimonial.name}
-                            </h4>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Navigation Arrows */}
-                <button
-                    onClick={() => handleManualSlide("prev")}
-                    className="absolute top-1/2 -left-4 md:-left-6 transform -translate-y-1/2 text-gray-900 bg-white rounded-full shadow-md p-2 hover:bg-gray-200 focus:outline-none"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
+   return (
+    <div className="py-16 bg-gray-50">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
+            Testimonies from Our Previous Students
+        </h2>
+        <div className="relative w-full max-w-[900px] mx-auto h-auto bg-white rounded-lg shadow-lg overflow-hidden">
+            {/* Testimonial Content */}
+            <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{
+                    transform: `translateX(-${currentIndex * 100}%)`,
+                    width: `${testimonials.length * 100}%`,
+                }}
+            >
+                {testimonials.map((testimonial, index) => (
+                    <div
+                        key={index}
+                        className="flex-shrink-0 w-full px-6 py-6 flex flex-col items-center text-center"
+                        style={{ boxSizing: "border-box" }}
                     >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M15 19l-7-7 7-7"
+                        <img
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            className="w-20 h-20 sm:w-24 sm:h-24 rounded-full shadow-md mb-4"
                         />
-                    </svg>
-                </button>
-                <button
-                    onClick={() => handleManualSlide("next")}
-                    className="absolute top-1/2 -right-4 md:-right-6 transform -translate-y-1/2 text-gray-900 bg-white rounded-full shadow-md p-2 hover:bg-gray-200 focus:outline-none"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                        />
-                    </svg>
-                </button>
+                        <p className="text-gray-700 italic text-sm sm:text-base leading-relaxed max-w-sm sm:max-w-md md:max-w-lg">
+                            &quot;{testimonial.text}&quot;
+                        </p>
+                        <h4 className="text-lg font-semibold text-gray-900 mt-2">
+                            - {testimonial.name}
+                        </h4>
+                    </div>
+                ))}
             </div>
+
+            {/* Navigation Arrows */}
+            <button
+                onClick={() => handleManualSlide("prev")}
+                className="absolute top-1/2 -left-2 sm:-left-4 transform -translate-y-1/2 text-gray-900 bg-white rounded-full shadow-md p-2 hover:bg-gray-200 focus:outline-none"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 19l-7-7 7-7"
+                    />
+                </svg>
+            </button>
+            <button
+                onClick={() => handleManualSlide("next")}
+                className="absolute top-1/2 -right-2 sm:-right-4 transform -translate-y-1/2 text-gray-900 bg-white rounded-full shadow-md p-2 hover:bg-gray-200 focus:outline-none"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                    />
+                </svg>
+            </button>
         </div>
-    );
-};
+    </div>
+);
 
 export default TestimonialSlider;
