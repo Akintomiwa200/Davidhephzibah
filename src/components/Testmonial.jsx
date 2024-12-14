@@ -12,11 +12,12 @@ const TestimonialSlider = () => {
             text: "The investment strategies I learned here have given me a steady income. Highly recommended!",
             image: "/images/testimonial2.jpg",
         },
-        {
-            name: "Emily Johnson",
-            text: "I finally understand how to make my money work for me. This program is life-changing!",
-            image: "/images/testimonial3.jpg",
+       {
+            name: "Gabriel Onifade Aka Coach Gabriel",
+            text: "Stock marketing Masterclass course by Coach David is the best financial Education class I have attended. I could remember how I have been struggling to manage my finances until I accessed the class on his status and the rest was history. Now I know how to manage my finances, how to diversify my income, know profitable stock with good returns, and increase my income through stock. If you are looking for how to manage your finances, financial discipline, and profitable stock you can invest in with good returns, I recommend this course anytime and anyday.",
+            image: "/images/testimonial5.jpg", // Replace with the correct path for Gabriel's image
         },
+
          {
             name: "Oluwafunmilayo",
             text: "If there is one thing I have learned from you coach, it is POSITIVE MINDSET. You have let me know that no matter the level of our income, we can still invest, and no amount is too small for investment. You made me realize that if I invest from the little that I have now, I am training myself to invest when I have high income. I also like the constant encouragement and the fact you lead by example, showing us what is possible by investing with small amounts, just to show us what is possible. Lastly, your act of service—the way you respond to us on the group when we have challenges. And you do that with HUMILITY.",
