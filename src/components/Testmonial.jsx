@@ -47,7 +47,7 @@ const TestimonialSlider = () => {
     return (
         <div className="py-16 bg-gray-50">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
-               Testimonies from Our Previous Student
+                Testimonies from Our Previous Students
             </h2>
             <div className="relative w-[90vw] max-w-[900px] mx-auto h-80 bg-white rounded-lg shadow-lg overflow-hidden">
                 {/* Testimonial Content */}
@@ -61,7 +61,7 @@ const TestimonialSlider = () => {
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="w-full flex-shrink-0 flex flex-col items-center text-center px-6 py-4"
+                            className="w-full flex-shrink-0 flex flex-col items-center text-center px-4 sm:px-6 py-6"
                             style={{ width: "100%" }}
                         >
                             <img
@@ -69,7 +69,7 @@ const TestimonialSlider = () => {
                                 alt={testimonial.name}
                                 className="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-full shadow-md mb-4"
                             />
-                            <p className="text-gray-700 italic text-sm sm:text-base">
+                            <p className="text-gray-700 italic text-sm sm:text-base leading-relaxed">
                                 &quot;{testimonial.text}&quot;
                             </p>
                             <h4 className="text-lg font-semibold text-gray-900 mt-2">
