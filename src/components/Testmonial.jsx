@@ -61,7 +61,7 @@ const TestimonialSlider = () => {
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="w-full flex-shrink-0 flex flex-col items-center text-center px-4 sm:px-6 py-6"
+                            className="w-[75vw] lg-[80vw] mx-auto flex-shrink-0 flex flex-col items-center text-center px-4 sm:px-6 py-6"
                             style={{ width: "100%" }}
                         >
                             <img
