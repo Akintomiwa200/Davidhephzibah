@@ -45,11 +45,11 @@ const TestimonialSlider = () => {
     };
 
     return (
-        <div className="py-16 bg-gray-50 mx-auto w-[100vw]" >
+        <div className="py-16 bg-gray-50">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
                 What Our Clients Say
             </h2>
-            <div className="relative w-[90vw] lg:w-[60vw] mx-auto h-72 bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="relative w-[90vw] max-w-[900px] mx-auto h-80 bg-white rounded-lg shadow-lg overflow-hidden">
                 {/* Testimonial Content */}
                 <div className="relative flex items-center h-full">
                     <div
@@ -61,7 +61,7 @@ const TestimonialSlider = () => {
                         {testimonials.map((testimonial, index) => (
                             <div
                                 key={index}
-                                className="w-[70vw] lg:w-[45vw] flex flex-col items-center text-center px-6 py-4"
+                                className="w-full flex flex-col items-center text-center px-6 py-4"
                             >
                                 <img
                                     src={testimonial.image}
@@ -79,10 +79,10 @@ const TestimonialSlider = () => {
                     </div>
                 </div>
 
-                {/* Arrows */}
+                {/* Navigation Arrows */}
                 <button
                     onClick={() => handleManualSlide("prev")}
-                    className="absolute top-1/2 -left-6 transform -translate-y-1/2 text-gray-900 bg-white rounded-full shadow-md p-2 hover:bg-gray-200"
+                    className="absolute top-1/2 -left-4 md:-left-6 transform -translate-y-1/2 text-gray-900 bg-white rounded-full shadow-md p-2 hover:bg-gray-200 focus:outline-none"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ const TestimonialSlider = () => {
                 </button>
                 <button
                     onClick={() => handleManualSlide("next")}
-                    className="absolute top-1/2 -right-6 transform -translate-y-1/2 text-gray-900 bg-white rounded-full shadow-md p-2 hover:bg-gray-200"
+                    className="absolute top-1/2 -right-4 md:-right-6 transform -translate-y-1/2 text-gray-900 bg-white rounded-full shadow-md p-2 hover:bg-gray-200 focus:outline-none"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
