@@ -1,129 +1,124 @@
 import { useState, useEffect, useRef } from "react";
+import { FaTerminal, FaUsers } from "react-icons/fa"; // Importing icons from react-icons
 
 const TestimonialSlider = () => {
-    const testimonials = [
-        {
-            name: "Anonymous",
-            text: "It's been awesome and wholesome, you are a master in the game sir. So it's been helpful really. I will just try to put more money.",
-            image: "/images/testimonial7.jpg",
-        },
-        {
-            name: "Coach David Hephzibah",
-            text: "My own story go long oooo. Seriously, boss has been a great blessing to me, especially on this KDP journey. He has made me grow financially and also ensure I don't spend anyhow.",
-            image: "/images/testimonial6.jpg",
-        },
-        {
-            name: "Gabriel Onifade Aka Coach Gabriel",
-            text: "Stock marketing Masterclass course by Coach David is the best financial Education class I have attended. I could remember how I have been struggling to manage my finances until I accessed the class on his status.",
-            image: "/images/testimonial5.jpg",
-        },
-        {
-            name: "Oluwafunmilayo",
-            text: "If there is one thing I have learned from you coach, it is POSITIVE MINDSET. You have let me know that no matter the level of our income, we can still invest.",
-            image: "/images/testimonial4.jpg",
-        },
-    ];
+  const testimonials = [
+    {
+      quote:
+        "It's been awesome and wholesome, you are a master in the game sir. So it's been helpful really. I will just try to put more money.",
+      image: "/images/testimonial7.jpg",
+      name: "Anonymous",
+      company: "Client 1",
+    },
+    {
+      quote:
+        "Seriously, boss has been a great blessing to me, especially on this KDP journey. He has made me grow financially and also ensure I don't spend anyhow.",
+      image: "/images/testimonial6.jpg",
+      name: "Coach David Hephzibah",
+      company: "KDP Client",
+    },
+    {
+      quote:
+        "Stock marketing Masterclass course by Coach David is the best financial Education class I have attended. I could remember how I have been struggling to manage my finances.",
+      image: "/images/testimonial5.jpg",
+      name: "Gabriel Onifade Aka Coach Gabriel",
+      company: "Stock Education Client",
+    },
+    {
+      quote:
+        "If there is one thing I have learned from you coach, it is POSITIVE MINDSET. You have let me know that no matter the level of our income, we can still invest.",
+      image: "/images/testimonial4.jpg",
+      name: "Oluwafunmilayo",
+      company: "Investment Client",
+    },
+  ];
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const intervalRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
 
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    };
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
 
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-        );
-    };
-
-    useEffect(() => {
-        intervalRef.current = setInterval(nextSlide, 3000);
-        return () => clearInterval(intervalRef.current);
-    }, []);
-
-    const handleManualSlide = (action) => {
-        clearInterval(intervalRef.current);
-        if (action === "next") nextSlide();
-        else prevSlide();
-        intervalRef.current = setInterval(nextSlide, 3000);
-    };
-
-    return (
-        <div className="py-8 sm:py-12 bg-gray-50">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-10 text-gray-900">
-                Testimonies from Our Previous Students
-            </h2>
-            <div className="relative w-full mx-auto max-w-7xl overflow-hidden">
-                <div
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={{
-                        transform: `translateX(-${currentIndex * 100}%)`,
-                        width: `${testimonials.length * 100}%`,
-                    }}
-                >
-                    {testimonials.map((testimonial, index) => (
-                        <div
-                            key={index}
-                            className="w-full flex-shrink-0 px-6 py-8 flex flex-col items-center text-center bg-white"
-                        >
-                            <img
-                                src={testimonial.image}
-                                alt={testimonial.name}
-                                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full shadow-md mb-4"
-                            />
-                            <p className="text-gray-700 text-sm sm:text-base leading-relaxed break-words whitespace-normal max-w-[90%] md:max-w-lg">
-                                &quot;{testimonial.text}&quot;
-                            </p>
-                            <h4 className="text-lg font-semibold text-gray-900 mt-4">
-                                - {testimonial.name}
-                            </h4>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Navigation Arrows */}
-                <button
-                    onClick={() => handleManualSlide("prev")}
-                    className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-200 text-gray-900 rounded-full shadow p-2 hover:bg-gray-300 focus:outline-none"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M15 19l-7-7 7-7"
-                        />
-                    </svg>
-                </button>
-                <button
-                    onClick={() => handleManualSlide("next")}
-                    className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-200 text-gray-900 rounded-full shadow p-2 hover:bg-gray-300 focus:outline-none"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                        />
-                    </svg>
-                </button>
-            </div>
-        </div>
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
+  };
+
+  useEffect(() => {
+    intervalRef.current = setInterval(nextSlide, 3000);
+    return () => clearInterval(intervalRef.current);
+  }, []);
+
+  const handleManualSlide = (action) => {
+    clearInterval(intervalRef.current);
+    if (action === "next") nextSlide();
+    else prevSlide();
+    intervalRef.current = setInterval(nextSlide, 3000);
+  };
+
+  return (
+    <section id="testimonials" className="py-10 bg-gray-900 text-gray-400">
+      <div className="container px-5 mx-auto text-center">
+        <FaUsers className="w-10 h-10 text-gray-200 inline-block mb-4" />
+        <h1 className="sm:text-4xl text-3xl font-medium title-font text-white mb-12">
+          Client Testimonials
+        </h1>
+        {/* Slider Content */}
+        <div className="relative overflow-hidden max-w-4xl mx-auto">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${currentIndex * 100}%)`,
+              width: `${testimonials.length * 100}%`,
+            }}
+          >
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="w-full flex-shrink-0 p-6 flex justify-center"
+              >
+                <div className="bg-gray-800 bg-opacity-40 p-8 rounded-lg text-left w-full">
+                  <FaTerminal className="w-8 h-8 text-gray-500 mb-4" />
+                  <p className="leading-relaxed mb-6">{testimonial.quote}</p>
+                  <div className="inline-flex items-center">
+                    <img
+                      alt="testimonial"
+                      src={testimonial.image}
+                      className="w-12 h-12 rounded-full object-cover object-center"
+                    />
+                    <span className="flex flex-col pl-4">
+                      <span className="title-font font-medium text-white">
+                        {testimonial.name}
+                      </span>
+                      <span className="text-gray-500 text-sm uppercase">
+                        {testimonial.company}
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={() => handleManualSlide("prev")}
+            className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white rounded-full p-2 hover:bg-gray-600 focus:outline-none"
+          >
+            &#10094; {/* Left Arrow */}
+          </button>
+          <button
+            onClick={() => handleManualSlide("next")}
+            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white rounded-full p-2 hover:bg-gray-600 focus:outline-none"
+          >
+            &#10095; {/* Right Arrow */}
+          </button>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default TestimonialSlider;
