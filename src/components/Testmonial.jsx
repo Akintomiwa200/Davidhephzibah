@@ -47,7 +47,7 @@ const TestimonialSlider = () => {
     return (
         <div className="py-16 bg-gray-50">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
-                What Our Clients Say
+               Testimonies from Our Previous Student
             </h2>
             <div className="relative w-[90vw] max-w-[900px] mx-auto h-80 bg-white rounded-lg shadow-lg overflow-hidden">
                 {/* Testimonial Content */}
