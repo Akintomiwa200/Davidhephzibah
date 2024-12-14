@@ -17,6 +17,11 @@ const TestimonialSlider = () => {
             text: "I finally understand how to make my money work for me. This program is life-changing!",
             image: "/images/testimonial3.jpg",
         },
+         {
+        name: "Oluwafunmilayo",
+        text: "If there is one thing I have learned from you coach, it is POSITIVE MINDSET. You have let me know that no matter the level of our income, we can still invest, and no amount is too small for investment. You made me realize that if I invest from the little that I have now, I am training myself to invest when I have high income. I also like the constant encouragement and the fact you lead by example, showing us what is possible by investing with small amounts, just to show us what is possible. Lastly, your act of service—the way you respond to us on the group when we have challenges. And you do that with HUMILITY.",
+        image: "/images/testimonial4.jpg", 
+    },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
