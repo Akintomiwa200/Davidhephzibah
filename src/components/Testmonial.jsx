@@ -45,11 +45,11 @@ const TestimonialSlider = () => {
     };
 
     return (
-        <div className="py-16 bg-gray-50">
+        <div className="py-16 bg-gray-50 mx-auto w-[100vw]" >
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
                 What Our Clients Say
             </h2>
-            <div className="relative max-w-3xl mx-auto h-72 bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="relative w-[90vw] lg:w-[60vw] mx-auto h-72 bg-white rounded-lg shadow-lg overflow-hidden">
                 {/* Testimonial Content */}
                 <div className="relative flex items-center h-full">
                     <div
