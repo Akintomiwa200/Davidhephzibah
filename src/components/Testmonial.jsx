@@ -82,7 +82,7 @@ const TestimonialSlider = () => {
                 <div className="bg-gray-100 p-8 rounded-lg text-left w-full shadow-lg">
                   <FaUser className="w-8 h-8 text-gray-500 mb-4" />
                <p
-                  className="leading-relaxed mb-6 break-words"
+                  className="leading-relaxed mb-6 break-all w-[80%] "
                   style={{ wordWrap: "break-word", overflowWrap: "break-word", whiteSpace: "normal" }}
                 >
                  {testimonial.quote}</p>
