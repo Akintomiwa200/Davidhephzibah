@@ -24,8 +24,8 @@ function App() {
         <About />
         <StockMarketMasterClass/>
         <WhatYouLearn />
-        <ContactForm />
         <Testimonial/>
+        <ContactForm />
         <Footer />
       </div>
     </Router>
