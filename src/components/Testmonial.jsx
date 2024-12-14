@@ -61,7 +61,7 @@ const TestimonialSlider = () => {
                         {testimonials.map((testimonial, index) => (
                             <div
                                 key={index}
-                                className="min-w-full flex flex-col items-center text-center px-6 py-4"
+                                className="w-[70vw] lg:w-[45vw] flex flex-col items-center text-center px-6 py-4"
                             >
                                 <img
                                     src={testimonial.image}
