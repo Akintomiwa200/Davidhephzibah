@@ -51,32 +51,32 @@ const TestimonialSlider = () => {
             </h2>
             <div className="relative w-[90vw] max-w-[900px] mx-auto h-80 bg-white rounded-lg shadow-lg overflow-hidden">
                 {/* Testimonial Content */}
-                <div className="relative flex items-center h-full">
-                    <div
-                        className="flex transition-transform duration-500 ease-in-out"
-                        style={{
-                            transform: `translateX(-${currentIndex * 100}%)`,
-                        }}
-                    >
-                        {testimonials.map((testimonial, index) => (
-                            <div
-                                key={index}
-                                className="w-full flex flex-col items-center text-center px-6 py-4"
-                            >
-                                <img
-                                    src={testimonial.image}
-                                    alt={testimonial.name}
-                                    className="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-full shadow-md mb-4"
-                                />
-                                <p className="text-gray-700 italic text-sm sm:text-base">
-                                    &quot;{testimonial.text}&quot;
-                                </p>
-                                <h4 className="text-lg font-semibold text-gray-900 mt-2">
-                                    - {testimonial.name}
-                                </h4>
-                            </div>
-                        ))}
-                    </div>
+                <div
+                    className="flex transition-transform duration-500 ease-in-out"
+                    style={{
+                        transform: `translateX(-${currentIndex * 100}%)`,
+                        width: `${testimonials.length * 100}%`,
+                    }}
+                >
+                    {testimonials.map((testimonial, index) => (
+                        <div
+                            key={index}
+                            className="w-full flex-shrink-0 flex flex-col items-center text-center px-6 py-4"
+                            style={{ width: "100%" }}
+                        >
+                            <img
+                                src={testimonial.image}
+                                alt={testimonial.name}
+                                className="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-full shadow-md mb-4"
+                            />
+                            <p className="text-gray-700 italic text-sm sm:text-base">
+                                &quot;{testimonial.text}&quot;
+                            </p>
+                            <h4 className="text-lg font-semibold text-gray-900 mt-2">
+                                - {testimonial.name}
+                            </h4>
+                        </div>
+                    ))}
                 </div>
 
                 {/* Navigation Arrows */}
