@@ -18,10 +18,10 @@ const TestimonialSlider = () => {
             image: "/images/testimonial3.jpg",
         },
          {
-        name: "Oluwafunmilayo",
-        text: "If there is one thing I have learned from you coach, it is POSITIVE MINDSET. You have let me know that no matter the level of our income, we can still invest, and no amount is too small for investment. You made me realize that if I invest from the little that I have now, I am training myself to invest when I have high income. I also like the constant encouragement and the fact you lead by example, showing us what is possible by investing with small amounts, just to show us what is possible. Lastly, your act of service—the way you respond to us on the group when we have challenges. And you do that with HUMILITY.",
-        image: "/images/testimonial4.jpg", 
-    },
+            name: "Oluwafunmilayo",
+            text: "If there is one thing I have learned from you coach, it is POSITIVE MINDSET. You have let me know that no matter the level of our income, we can still invest, and no amount is too small for investment. You made me realize that if I invest from the little that I have now, I am training myself to invest when I have high income. I also like the constant encouragement and the fact you lead by example, showing us what is possible by investing with small amounts, just to show us what is possible. Lastly, your act of service—the way you respond to us on the group when we have challenges. And you do that with HUMILITY.",
+            image: "/images/testimonial4.jpg", 
+        },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,7 +54,7 @@ const TestimonialSlider = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
                 Testimonies from Our Previous Students
             </h2>
-            <div className="relative w-[90vw] max-w-[900px] mx-auto h-80 bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="relative w-full max-w-[900px] mx-auto h-80 bg-white rounded-lg shadow-lg overflow-hidden">
                 {/* Testimonial Content */}
                 <div
                     className="flex transition-transform duration-500 ease-in-out"
@@ -66,7 +66,7 @@ const TestimonialSlider = () => {
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="w-[75vw] lg-[80vw] mx-auto flex-shrink-0 flex flex-col items-center text-center px-4 sm:px-6 py-6"
+                            className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto flex-shrink-0 flex flex-col items-center text-center px-4 sm:px-6 py-6"
                             style={{ width: "100%" }}
                         >
                             <img
