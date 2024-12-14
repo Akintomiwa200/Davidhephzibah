@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { FaTerminal, FaUsers } from "react-icons/fa"; // Importing icons from react-icons
+import { FaChevronLeft, FaChevronRight, FaUsers, FaUser } from "react-icons/fa"; // Importing icons from react-icons
 
 const TestimonialSlider = () => {
   const testimonials = [
@@ -59,11 +59,11 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <section id="testimonials" className="py-10 bg-gray-900 text-gray-400">
+    <section id="testimonials" className="py-10 bg-white text-gray-800">
       <div className="container px-5 mx-auto text-center">
-        <FaUsers className="w-10 h-10 text-gray-200 inline-block mb-4" />
-        <h1 className="sm:text-4xl text-3xl font-medium title-font text-white mb-12">
-       Testimonies from Our Previous Students
+        <FaUsers className="w-10 h-10 text-gray-500 inline-block mb-4" />
+        <h1 className="sm:text-4xl text-3xl font-medium title-font text-gray-800 mb-12">
+          Client Testimonials
         </h1>
         {/* Slider Content */}
         <div className="relative overflow-hidden max-w-4xl mx-auto">
@@ -79,8 +79,8 @@ const TestimonialSlider = () => {
                 key={index}
                 className="w-full flex-shrink-0 p-6 flex justify-center"
               >
-                <div className="bg-gray-800 bg-opacity-40 p-8 rounded-lg text-left w-full">
-                  <FaTerminal className="w-8 h-8 text-gray-500 mb-4" />
+                <div className="bg-gray-100 p-8 rounded-lg text-left w-full shadow-lg">
+                  <FaUser className="w-8 h-8 text-gray-500 mb-4" />
                   <p className="leading-relaxed mb-6">{testimonial.quote}</p>
                   <div className="inline-flex items-center">
                     <img
@@ -89,10 +89,10 @@ const TestimonialSlider = () => {
                       className="w-12 h-12 rounded-full object-cover object-center"
                     />
                     <span className="flex flex-col pl-4">
-                      <span className="title-font font-medium text-white">
+                      <span className="title-font font-medium text-gray-900">
                         {testimonial.name}
                       </span>
-                      <span className="text-gray-500 text-sm uppercase">
+                      <span className="text-gray-600 text-sm uppercase">
                         {testimonial.company}
                       </span>
                     </span>
@@ -105,15 +105,15 @@ const TestimonialSlider = () => {
           {/* Navigation Arrows */}
           <button
             onClick={() => handleManualSlide("prev")}
-            className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white rounded-full p-2 hover:bg-gray-600 focus:outline-none"
+            className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-300 text-gray-700 rounded-full p-2 hover:bg-gray-400 focus:outline-none"
           >
-            &#10094; {/* Left Arrow */}
+            <FaChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={() => handleManualSlide("next")}
-            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white rounded-full p-2 hover:bg-gray-600 focus:outline-none"
+            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-300 text-gray-700 rounded-full p-2 hover:bg-gray-400 focus:outline-none"
           >
-            &#10095; {/* Right Arrow */}
+            <FaChevronRight className="w-6 h-6" />
           </button>
         </div>
       </div>
